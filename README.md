@@ -6,7 +6,7 @@ This is a simple IP logging tool that collects information about a user's IP add
 
 1. Clone the repository:
 ```
-git clone https://github.com/your-username/ip-logger.git
+git clone https://github.com/Javadkarami-com/ip-logger.git
 ```
 
 2. Install the required dependencies:
