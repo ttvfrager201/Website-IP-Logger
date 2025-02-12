@@ -1,18 +1,32 @@
-# 🌐 Discord Website Logger 🌐
-![Discord Website Logger Image](https://cdn.discordapp.com/attachments/1004894678350573608/1008145253628391524/unknown.png)</br>
-# Discord Website Logger ℹ️
-This App Using for Sending Visitors ip Address with Their Information to The via **Discord Webhook**</br>
-information that app send contain visitors ISP, Country & Region,  Location, Client info and more ...
-# Setting Up App 💡
-in `config.json` -> *`"Token"`* paste your **Discord Webhook** url </br>
-in `config.json` -> *`"Key"`* paste your **API KEY** created in https://ipgeolocation.io/signup.html
-# Extra option 🪛
-Add This to your index.html file to redirect to another page after visitor information logged to webhook
-```html
-    <meta http-equiv="refresh" content="3; URL=YOURWEBPAGEADDRESS" />
+# IP Logger
+
+This is a simple IP logging tool that collects information about a user's IP address, location, and device details, and sends it to a Discord webhook.
+
+## Installation
+
+1. Clone the repository:
 ```
-# Start app ▶️
-its simple, Just Open index.html </br>
-# Hope you enjoy it 💓
-Don't forget to star repository ⭐
- 
+git clone https://github.com/your-username/ip-logger.git
+```
+
+2. Install the required dependencies:
+```
+cd ip-logger
+```
+
+3. Create a `config.json` file in the root directory and add your Discord webhook URL and API key:
+```json
+{
+  "Token":"https://discord.com/api/webhooks/....",
+  "key":"APIKEY-HERE created in https://ipgeolocation.io/"
+}
+```
+
+## Usage
+
+1. Open the `index.html` file in a web browser.
+2. The script will automatically fetch the user's IP information and send it to the configured Discord webhook.
+
+## Contributing
+
+If you find any issues or have suggestions for improvements, feel free to open a new issue or submit a pull request. Contributions are welcome!
