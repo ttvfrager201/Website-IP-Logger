@@ -4,10 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website ip logger</title>
+    <title>YOU'VE BEEN HACKED</title>
+    <style>
+        body {
+            background-color: #191923;
+            color: #f1f1f1;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: red;
+            text-shadow: 0 0 15px red, 0 0 30px red, 0 0 45px red;
+        }
+
+        p {
+            font-size: 30px;
+            color: yellow;
+            text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+        }
+
+        .flashing {
+            animation: flash 1s infinite;
+        }
+
+        @keyframes flash {
+            0% { color: red; }
+            50% { color: yellow; }
+            100% { color: red; }
+        }
+    </style>
 </head>
-<body bgcolor="#191923">
-    <h1>Getting information of Your IP-Adress</h1>
-    <script src="./information.js"></script>
+<body onload="makeFullScreen()">
+    <h1 class="flashing">YOU'VE BEEN HACKED!</h1>
+    <p>Pay 3000 Bitcoin to avoid further consequences...</p>
+
+    <script>
+        // Function to make the page go fullscreen
+        function makeFullScreen() {
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            } else if (document.documentElement.mozRequestFullScreen) {
+                document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) {
+                document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) {
+                document.documentElement.msRequestFullscreen();
+            }
+        }
+
+        // Add a spooky sound if you'd like (optional)
+        const audio = new Audio('https://www.soundjay.com/button/beep-07.wav');
+        audio.loop = true;
+        audio.play();
+    </script>
 </body>
 </html>
